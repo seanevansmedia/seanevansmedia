@@ -1,9 +1,6 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  experimental: {
-    reactCompiler: true,
-  },
   images: {
     remotePatterns: [
       {
@@ -12,7 +9,7 @@ const nextConfig: NextConfig = {
       },
       {
         protocol: 'https',
-        hostname: 'api.microlink.io', // <--- Add this line
+        hostname: 'api.microlink.io',
       },
     ],
   },

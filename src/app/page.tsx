@@ -31,8 +31,9 @@ const DATA = {
       id: "1",
       title: "Social Gold",
       tag: "Social & Firebase",
-      desc: "Real-time social platform replicating Twitter functionality. Features live feeds, Google Auth, and mixed media uploads via Firestore.",
-      img: "https://api.microlink.io/?url=https://social-gold-i2vk.vercel.app/&screenshot=true&meta=false&embed=screenshot.url",
+      desc: "Real-time social platform replicating Twitter/X functionality. Features live feeds, Google Auth, and mixed media uploads via Firestore.",
+      // UPDATED: Restored your live Vercel link with a 5-second wait timer to ensure it loads before snapping the picture
+      img: "https://api.microlink.io/?url=https://social-gold-i2vk.vercel.app/&screenshot=true&meta=false&embed=screenshot.url&waitFor=5s",
       link: "https://social-gold-i2vk.vercel.app/"
     },
     {
@@ -46,8 +47,8 @@ const DATA = {
     {
       id: "3",
       title: "Sonic Journal",
-      tag: "AI & Audio",
-      desc: "Mood-tracking platform that transforms text entries into curated musical soundtracks using sentiment analysis.",
+      tag: "AI, Audio & Supabase",
+      desc: "AI-powered mood tracker built with Next.js 15 and Supabase. Transforms text entries into curated soundtracks using a unique 'Guest Session' database architecture.",
       img: "https://api.microlink.io/?url=https://music-journal-eight.vercel.app&screenshot=true&meta=false&embed=screenshot.url", 
       link: "https://music-journal-eight.vercel.app/"
     },
@@ -151,7 +152,7 @@ export default function Portfolio() {
       {/* CONTENT LAYER */}
       <div className="relative z-10 h-full">
         
-        {/* NAVIGATION - FIXED */}
+        {/* NAVIGATION */}
         <nav 
           className={cn(
             "fixed top-0 w-full z-50 flex justify-between items-center border-b border-neutral-400/30 backdrop-blur-md transition-all duration-300 ease-in-out",

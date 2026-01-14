@@ -9,7 +9,8 @@ import {
   Environment, Sphere, useTexture 
 } from "@react-three/drei";
 import { 
-  ArrowUpRight, ExternalLink, Mail, Menu, X, ArrowRight 
+  ArrowUpRight, ExternalLink, Mail, Menu, X, ArrowRight,
+  Smartphone, Zap, MonitorSmartphone
 } from "lucide-react";
 import { clsx, type ClassValue } from "clsx";
 import { twMerge } from "tailwind-merge";
@@ -23,16 +24,32 @@ function cn(...inputs: ClassValue[]) {
 const DATA = {
   name: "SEAN EVANS",
   role: "Digital Architect",
-  bio: "Engineering the invisible. Transforming raw logic into fluid, tangible, high-velocity digital experiences.",
+  bio: "Engineering for impact. I build mobile-first, high-velocity digital experiences designed to maximize conversions. By achieving 90+ page speeds and seamless responsiveness, I ensure your message reaches every user, instantly.",
   aboutText: "I am a Full Stack Developer who transforms abstract concepts into high-performance digital reality. With a deep focus on the Next.js ecosystem, I blend technical precision with creative design to build applications that are not only robust but memorable.",
   stack: ["Next.js", "TypeScript", "React", "Tailwind"],
+  features: [
+    {
+      title: "Mobile First Design",
+      icon: Smartphone,
+      desc: "Every interaction is crafted for the smallest screen first. I prioritize touch-optimized navigation and content hierarchy to ensure the core experience is effortless on handheld devices before scaling up."
+    },
+    {
+      title: "90+ Lighthouse Scores",
+      icon: Zap,
+      desc: "Speed is a feature, not an afterthought. By utilizing Next.js server-side rendering, image optimization, and efficient code-splitting, I deliver near-instant load times that boost SEO and user retention."
+    },
+    {
+      title: "Fully Responsive",
+      icon: MonitorSmartphone,
+      desc: "Fluid layouts that adapt to any viewport. From 4K ultrawide monitors to tablets and foldables, your digital presence maintains its integrity, accessibility, and aesthetic impact across the entire device spectrum."
+    }
+  ],
   projects: [
     {
       id: "1",
       title: "Social Gold",
       tag: "Social & Firebase",
       desc: "Real-time social platform replicating Twitter/X functionality. Features live feeds, Google Auth, and mixed media uploads via Firestore.",
-      // UPDATED: Restored your live Vercel link with a 5-second wait timer to ensure it loads before snapping the picture
       img: "https://api.microlink.io/?url=https://social-gold-i2vk.vercel.app/&screenshot=true&meta=false&embed=screenshot.url&waitFor=5s",
       link: "https://social-gold-i2vk.vercel.app/"
     },
@@ -43,14 +60,6 @@ const DATA = {
       desc: "Premium construction management platform with a custom 'Executive' design system, featuring multi-page architecture and high-performance animations.",
       img: "https://api.microlink.io/?url=https://summit-pacific.vercel.app/&screenshot=true&meta=false&embed=screenshot.url",
       link: "https://summit-pacific.vercel.app/"
-    },
-    {
-      id: "3",
-      title: "Sonic Journal",
-      tag: "AI, Audio & Supabase",
-      desc: "AI-powered mood tracker built with Next.js 15 and Supabase. Transforms text entries into curated soundtracks using a unique 'Guest Session' database architecture.",
-      img: "https://api.microlink.io/?url=https://music-journal-eight.vercel.app&screenshot=true&meta=false&embed=screenshot.url", 
-      link: "https://music-journal-eight.vercel.app/"
     },
     {
       id: "4",
@@ -65,8 +74,17 @@ const DATA = {
       title: "Vancouver Bistro",
       tag: "Hospitality & SEO",
       desc: "High-performance restaurant platform built on Next.js 16. Features a custom 'Matcha' design system and dynamic booking flow.",
-      img: "https://api.microlink.io/?url=https://vancouver-bistro.vercel.app/&screenshot=true&meta=false&embed=screenshot.url",
+      // UPDATED: Live screenshot restored
+      img: "https://api.microlink.io/?url=https://vancouver-bistro.vercel.app/&screenshot=true&meta=false&embed=screenshot.url&waitFor=5s",
       link: "https://vancouver-bistro.vercel.app/" 
+    },
+    {
+      id: "3",
+      title: "Sonic Journal",
+      tag: "AI, Audio & Supabase",
+      desc: "AI-powered mood tracker built with Next.js 15 and Supabase. Transforms text entries into curated soundtracks using a unique 'Guest Session' database architecture.",
+      img: "https://api.microlink.io/?url=https://music-journal-eight.vercel.app&screenshot=true&meta=false&embed=screenshot.url", 
+      link: "https://music-journal-eight.vercel.app/"
     },
   ]
 };
@@ -254,50 +272,67 @@ export default function Portfolio() {
            </div>
            
            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-12">
-              {DATA.projects.map((project, i) => (
-                 <motion.a
-                   href={project.link}
-                   target="_blank"
-                   rel="noopener noreferrer"
-                   key={project.id}
-                   initial={{ opacity: 0, scale: 0.95 }}
-                   whileInView={{ opacity: 1, scale: 1 }}
-                   viewport={{ once: true, margin: "-50px" }}
-                   transition={{ delay: i * 0.1, duration: 0.5 }}
-                   className="group relative p-4 md:p-6 rounded-2xl bg-white/60 backdrop-blur-xl border border-white/50 shadow-sm hover:shadow-2xl transition-all duration-500 cursor-pointer block"
-                 >
-                    {/* Live Screenshot Container */}
-                    <div className="aspect-video w-full overflow-hidden rounded-lg mb-4 md:mb-6 bg-neutral-200 relative border border-black/5">
-                       <Image 
-                          src={project.img} 
-                          alt={project.title}
-                          fill
-                          unoptimized
-                          className="object-cover transition-transform duration-700 group-hover:scale-105"
-                       />
-                       <div className="absolute inset-0 bg-neutral-900/0 group-hover:bg-neutral-900/5 transition-colors" />
-                    </div>
-                    
-                    <div className="flex justify-between items-end">
-                       <div>
-                          <p className="text-[10px] md:text-xs font-bold uppercase tracking-widest text-neutral-500 mb-1 md:mb-2">{project.tag}</p>
-                          <h3 className="text-xl md:text-3xl font-bold mb-1 md:mb-2 text-neutral-900 group-hover:text-blue-600 transition-colors flex items-center gap-2">
-                             {project.title}
-                             <ExternalLink size={16} className="opacity-0 group-hover:opacity-100 transition-opacity" />
-                          </h3>
-                          <p className="text-neutral-600 text-base max-w-sm md:max-w-md leading-tight">{project.desc}</p>
-                       </div>
-                       <div className="bg-white p-3 rounded-full shadow-sm group-hover:scale-110 transition-transform">
-                          <ArrowUpRight size={24} className="text-neutral-900" />
-                       </div>
-                    </div>
-                 </motion.a>
-              ))}
+              {DATA.projects.map((project, i) => {
+                 // Check if it's the LAST item (Sonic Journal) to make it full width
+                 const isLastItem = i === DATA.projects.length - 1;
+                 
+                 return (
+                   <motion.a
+                     href={project.link}
+                     target="_blank"
+                     rel="noopener noreferrer"
+                     key={project.id}
+                     initial={{ opacity: 0, scale: 0.95 }}
+                     whileInView={{ opacity: 1, scale: 1 }}
+                     viewport={{ once: true, margin: "-50px" }}
+                     transition={{ delay: i * 0.1, duration: 0.5 }}
+                     className={cn(
+                       "group relative p-4 md:p-6 rounded-2xl bg-white/60 backdrop-blur-xl border border-white/50 shadow-sm hover:shadow-2xl transition-all duration-500 cursor-pointer block",
+                       isLastItem ? "md:col-span-2" : ""
+                     )}
+                   >
+                      {/* Live Screenshot Container */}
+                      <div className={cn(
+                        "relative w-full overflow-hidden rounded-lg mb-4 md:mb-6 bg-neutral-200 border border-black/5",
+                        isLastItem ? "aspect-video md:aspect-[21/9]" : "aspect-video"
+                      )}>
+                         <Image 
+                            src={project.img} 
+                            alt={project.title}
+                            fill
+                            unoptimized
+                            // UPDATED: object-top to anchor screenshots to the header
+                            className="object-cover object-top transition-transform duration-700 group-hover:scale-105"
+                         />
+                         <div className="absolute inset-0 bg-neutral-900/0 group-hover:bg-neutral-900/5 transition-colors" />
+                      </div>
+                      
+                      <div className="flex justify-between items-end">
+                         <div>
+                            <p className="text-[10px] md:text-xs font-bold uppercase tracking-widest text-neutral-500 mb-1 md:mb-2">{project.tag}</p>
+                            <h3 className="text-2xl md:text-4xl font-bold mb-1 md:mb-2 text-neutral-900 group-hover:text-blue-600 transition-colors flex items-center gap-2">
+                               {project.title}
+                               <ExternalLink size={16} className="opacity-0 group-hover:opacity-100 transition-opacity" />
+                            </h3>
+                            <p className={cn(
+                              "text-neutral-600 text-xl leading-tight",
+                              isLastItem ? "max-w-xl md:max-w-2xl" : "max-w-sm md:max-w-md"
+                            )}>
+                              {project.desc}
+                            </p>
+                         </div>
+                         <div className="bg-white p-3 rounded-full shadow-sm group-hover:scale-110 transition-transform">
+                            <ArrowUpRight size={24} className="text-neutral-900" />
+                         </div>
+                      </div>
+                   </motion.a>
+                 );
+              })}
            </div>
         </section>
 
         {/* --- SECTION 3: PHILOSOPHY (BOTTOM) --- */}
-        <section className="px-6 md:px-24 pb-12 md:pb-24 max-w-7xl mx-auto flex flex-col justify-start">
+        <section className="px-6 md:px-24 pb-12 max-w-7xl mx-auto flex flex-col justify-start">
            <motion.div
              initial={{ opacity: 0, y: 30 }}
              whileInView={{ opacity: 1, y: 0 }}
@@ -316,18 +351,64 @@ export default function Portfolio() {
               </h1>
 
               <div className="flex flex-col md:flex-row gap-6 md:gap-12 items-start border-t border-neutral-900/10 pt-6 md:pt-8">
-                 <p className="text-xl md:text-xl max-w-lg leading-relaxed font-medium text-neutral-900">
+                 <p className="text-xl md:text-xl max-w-4xl leading-relaxed font-medium text-neutral-900">
                     {DATA.bio}
                  </p>
               </div>
            </motion.div>
         </section>
 
-        {/* FOOTER (ID: CONTACT) */}
-        <footer id="contact" className="px-6 md:px-24 py-16 border-t border-neutral-400/30 bg-[#e0e0e0]/80 backdrop-blur-md">
+        {/* --- SECTION 4: FEATURES --- */}
+        <section className="px-6 md:px-24 pb-24 pt-4 max-w-7xl mx-auto">
+           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              {DATA.features.map((feature, i) => (
+                 <motion.div
+                   key={i}
+                   initial={{ opacity: 0, y: 20 }}
+                   whileInView={{ opacity: 1, y: 0 }}
+                   viewport={{ once: true }}
+                   transition={{ delay: i * 0.1, duration: 0.5 }}
+                   className="bg-white/40 backdrop-blur-md border border-white/50 rounded-2xl p-8 shadow-sm hover:shadow-md transition-all flex flex-col items-center text-center"
+                 >
+                    <div className="bg-neutral-900 w-12 h-12 rounded-full flex items-center justify-center text-white mb-6">
+                       <feature.icon size={24} />
+                    </div>
+                    <h3 className="text-xl font-bold mb-3 text-neutral-900">{feature.title}</h3>
+                    <p className="text-neutral-700 leading-relaxed text-base">
+                       {feature.desc}
+                    </p>
+                 </motion.div>
+              ))}
+           </div>
+        </section>
+
+        {/* --- SECTION 5: CONTACT (TEXT ONLY) - WITH BACKGROUND --- */}
+        <section id="contact" className="px-6 md:px-24 pb-24 max-w-7xl mx-auto text-center">
+           <motion.div
+             initial={{ opacity: 0, scale: 0.95 }}
+             whileInView={{ opacity: 1, scale: 1 }}
+             viewport={{ once: true }}
+             transition={{ duration: 0.6 }}
+             className="flex flex-col items-center gap-6 bg-white/40 backdrop-blur-xl border border-white/50 rounded-3xl p-12 md:p-24 shadow-2xl"
+           >
+              <h2 className="text-4xl md:text-7xl font-bold tracking-tighter text-neutral-900">
+                 Ready to Collaborate?
+              </h2>
+              <p className="text-lg md:text-xl text-neutral-600 max-w-2xl">
+                 I am currently available for freelance projects and open to full-time opportunities.
+              </p>
+              <a 
+                href="mailto:seanevansmedia@gmail.com" 
+                className="text-2xl md:text-4xl font-bold text-neutral-900 hover:text-neutral-600 border-b-2 border-neutral-900 hover:border-neutral-600 transition-all pb-1"
+              >
+                 seanevansmedia@gmail.com
+              </a>
+           </motion.div>
+        </section>
+
+        {/* FOOTER */}
+        <footer className="px-6 md:px-24 py-16 border-t border-neutral-400/30 bg-[#e0e0e0]/80 backdrop-blur-md">
            <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start md:items-end gap-12">
-              
-              {/* LEFT: LOGO & EMAIL */}
               <div className="flex flex-col items-start gap-6">
                  <Logo />
                  <a href="mailto:seanevansmedia@gmail.com" className="flex items-center gap-2 text-neutral-800 font-bold hover:underline hover:text-black transition-colors text-lg">
@@ -335,14 +416,11 @@ export default function Portfolio() {
                     seanevansmedia@gmail.com
                  </a>
               </div>
-
-              {/* RIGHT: LINKS (Far Right) */}
               <div className="flex flex-col gap-4 text-sm font-bold uppercase tracking-wider text-neutral-800 text-left md:text-right">
                  <a href="#about" className="hover:text-black hover:-translate-x-2 transition-transform">About</a>
                  <a href="#portfolio" className="hover:text-black hover:-translate-x-2 transition-transform">Portfolio</a>
                  <a href="#contact" className="hover:text-black hover:-translate-x-2 transition-transform">Contact</a>
               </div>
-              
            </div>
         </footer>
 

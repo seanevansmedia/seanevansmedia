@@ -49,7 +49,7 @@ const DATA = {
       id: "1",
       title: "Social Gold",
       tag: "Social & Firebase",
-      desc: "Real-time social platform replicating Twitter/X functionality. Features live feeds, Google Auth, and mixed media uploads via Firestore.",
+      desc: "Real-time social platform replicating Twitter/X functionality. Features live feeds, Google Auth, and media uploads via Firestore.",
       img: "https://api.microlink.io/?url=https://social-gold-i2vk.vercel.app/&screenshot=true&meta=false&embed=screenshot.url&waitFor=5s",
       link: "https://social-gold-i2vk.vercel.app/"
     },
@@ -57,7 +57,7 @@ const DATA = {
       id: "2",
       title: "Summit Pacific",
       tag: "Corporate & Construction",
-      desc: "Premium construction management platform with a custom 'Executive' design system, featuring multi-page architecture and high-performance animations.",
+      desc: "Premium construction management platform with a custom 'Executive' design system, built with Next.JS 16 for high performance page speeds.",
       img: "https://api.microlink.io/?url=https://summit-pacific.vercel.app/&screenshot=true&meta=false&embed=screenshot.url",
       link: "https://summit-pacific.vercel.app/"
     },
@@ -65,7 +65,7 @@ const DATA = {
       id: "4",
       title: "Obsidian Estates",
       tag: "Real Estate & Supabase",
-      desc: "Cinematic luxury property platform featuring real-time PostgreSQL filtering and an immersive dark-mode aesthetic.",
+      desc: "Cinematic luxury property platform featuring real-time PostgreSQL filtering with Supabase and an immersive dark-mode aesthetic.",
       img: "https://api.microlink.io/?url=https://luxury-real-estate-swart.vercel.app/&screenshot=true&meta=false&embed=screenshot.url",
       link: "https://luxury-real-estate-swart.vercel.app/"
     },
@@ -82,7 +82,7 @@ const DATA = {
       id: "3",
       title: "Sonic Journal",
       tag: "AI, Audio & Supabase",
-      desc: "AI-powered mood tracker built with Next.js 15 and Supabase. Transforms text entries into curated soundtracks using a unique 'Guest Session' database architecture.",
+      desc: "AI-powered mood tracker built with Next.js 16 and Supabase. Transforms text entries into curated soundtracks.",
       img: "https://api.microlink.io/?url=https://music-journal-eight.vercel.app&screenshot=true&meta=false&embed=screenshot.url", 
       link: "https://music-journal-eight.vercel.app/"
     },
@@ -315,7 +315,7 @@ export default function Portfolio() {
                                <ExternalLink size={16} className="opacity-0 group-hover:opacity-100 transition-opacity" />
                             </h3>
                             <p className={cn(
-                              "text-neutral-600 text-xl leading-tight",
+                              "text-neutral-600 text-lg leading-tight",
                               isLastItem ? "max-w-xl md:max-w-2xl" : "max-w-sm md:max-w-md"
                             )}>
                               {project.desc}

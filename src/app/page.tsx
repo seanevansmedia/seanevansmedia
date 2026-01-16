@@ -24,8 +24,12 @@ function cn(...inputs: ClassValue[]) {
 const DATA = {
   name: "SEAN EVANS",
   role: "Digital Architect",
+  
+  // PRESERVED: Speed & Conversion Bio
   bio: "Engineering for impact. I build mobile-first, high-velocity digital experiences designed to maximize conversions. By achieving 90+ page speeds and seamless responsiveness, I ensure your message reaches every user, instantly.",
+  
   aboutText: "I am a Full Stack Developer who transforms abstract concepts into high-performance digital reality. With a deep focus on the Next.js ecosystem, I blend technical precision with creative design to build applications that are not only robust but memorable.",
+  
   stack: ["Next.js", "TypeScript", "React", "Tailwind"],
   features: [
     {
@@ -49,15 +53,16 @@ const DATA = {
       id: "1",
       title: "Social Gold",
       tag: "Social & Firebase",
-      desc: "Real-time social platform replicating Twitter/X functionality. Features live feeds, Google Auth, and media uploads via Firestore.",
-      img: "https://api.microlink.io/?url=https://social-gold-i2vk.vercel.app/&screenshot=true&meta=false&embed=screenshot.url&waitFor=5s",
+      desc: "Real-time social platform replicating Twitter/X functionality. Features live feeds, Google Auth, and mixed media uploads via Firestore.",
+      // FIXED: Increased wait time to 8s to ensure UI loads fully before screenshot
+      img: "https://api.microlink.io/?url=https://social-gold-i2vk.vercel.app/&screenshot=true&meta=false&embed=screenshot.url&waitFor=8s",
       link: "https://social-gold-i2vk.vercel.app/"
     },
     {
       id: "2",
       title: "Summit Pacific",
       tag: "Corporate & Construction",
-      desc: "Premium construction management platform with a custom 'Executive' design system, built with Next.JS 16 for high performance page speeds.",
+      desc: "Premium construction management platform with a custom 'Executive' design system, featuring multi-page architecture and high-performance animations.",
       img: "https://api.microlink.io/?url=https://summit-pacific.vercel.app/&screenshot=true&meta=false&embed=screenshot.url",
       link: "https://summit-pacific.vercel.app/"
     },
@@ -65,7 +70,7 @@ const DATA = {
       id: "4",
       title: "Obsidian Estates",
       tag: "Real Estate & Supabase",
-      desc: "Cinematic luxury property platform featuring real-time PostgreSQL filtering with Supabase and an immersive dark-mode aesthetic.",
+      desc: "Cinematic luxury property platform featuring real-time PostgreSQL filtering and an immersive dark-mode aesthetic.",
       img: "https://api.microlink.io/?url=https://luxury-real-estate-swart.vercel.app/&screenshot=true&meta=false&embed=screenshot.url",
       link: "https://luxury-real-estate-swart.vercel.app/"
     },
@@ -74,7 +79,6 @@ const DATA = {
       title: "Vancouver Bistro",
       tag: "Hospitality & SEO",
       desc: "High-performance restaurant platform built on Next.js 16. Features a custom 'Matcha' design system and dynamic booking flow.",
-      // UPDATED: Live screenshot restored
       img: "https://api.microlink.io/?url=https://vancouver-bistro.vercel.app/&screenshot=true&meta=false&embed=screenshot.url&waitFor=5s",
       link: "https://vancouver-bistro.vercel.app/" 
     },
@@ -82,7 +86,7 @@ const DATA = {
       id: "3",
       title: "Sonic Journal",
       tag: "AI, Audio & Supabase",
-      desc: "AI-powered mood tracker built with Next.js 16 and Supabase. Transforms text entries into curated soundtracks.",
+      desc: "AI-powered mood tracker built with Next.js 15 and Supabase. Transforms text entries into curated soundtracks using a unique 'Guest Session' database architecture.",
       img: "https://api.microlink.io/?url=https://music-journal-eight.vercel.app&screenshot=true&meta=false&embed=screenshot.url", 
       link: "https://music-journal-eight.vercel.app/"
     },
@@ -301,7 +305,6 @@ export default function Portfolio() {
                             alt={project.title}
                             fill
                             unoptimized
-                            // UPDATED: object-top to anchor screenshots to the header
                             className="object-cover object-top transition-transform duration-700 group-hover:scale-105"
                          />
                          <div className="absolute inset-0 bg-neutral-900/0 group-hover:bg-neutral-900/5 transition-colors" />
@@ -374,7 +377,7 @@ export default function Portfolio() {
                        <feature.icon size={24} />
                     </div>
                     <h3 className="text-xl font-bold mb-3 text-neutral-900">{feature.title}</h3>
-                    <p className="text-neutral-700 leading-relaxed text-base">
+                    <p className="text-neutral-700 leading-relaxed text-lg">
                        {feature.desc}
                     </p>
                  </motion.div>

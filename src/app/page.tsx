@@ -20,7 +20,7 @@ const DATA = {
   name: "SEAN EVANS",
   role: "Digital Architect",
   bio: "Engineering for impact. I build mobile-first, high-velocity digital experiences designed to maximize conversions. By achieving 90+ page speeds and seamless responsiveness, I ensure your message reaches every user, instantly.",
-  aboutText: "I am a Full Stack Developer who transforms abstract concepts into high-performance digital reality. With a deep focus on the Next.js ecosystem, I blend technical precision with creative design to build applications that are not only robust but memorable.",
+  aboutText: "Hi, I’m Sean Evans. I run a web development agency that specializes in small business website design and development for clients across the U.S. and Canada. My goal is simple: build long-term relationships with clients and help their businesses grow over time."
   stack: ["Next.js", "TypeScript", "React", "Tailwind"],
   features: [
     { title: "Mobile First Design", icon: Smartphone, desc: "Every interaction is crafted for the smallest screen first. I prioritize touch-optimized navigation and content hierarchy." },
@@ -184,7 +184,7 @@ export default function Portfolio() {
                   </a>
                ))}
                <div className="mt-auto pb-12 opacity-50 text-xs font-bold uppercase tracking-widest text-cyan-200">
-                  Sean Evans Media © 2026
+                  © Copyright 2026 seanevansmedia.com 
                </div>
             </motion.div>
           )}
@@ -369,12 +369,12 @@ export default function Portfolio() {
                  <Logo />
 <a 
   href="mailto:seanevansmedia@gmail.com" 
-  className="text-lg md:text-4xl font-bold border-b-2 transition-all pb-1 border-white hover:text-cyan-300 hover:border-cyan-300 text-white"
+  className="text-lg md:text-1xl font-bold transition-all pb-1 border-white hover:text-cyan-300 hover:border-cyan-300 text-white"
 >
    seanevansmedia@gmail.com
 </a>
               </div>
-              <div className="flex flex-col gap-4 text-sm font-bold uppercase tracking-wider text-left md:text-right text-neutral-400">
+              <div className="flex flex-col gap-4 text-sm font-bold uppercase tracking-wider text-left md:text-right text-neutral-300">
                  <a href="#about" className="transition-transform hover:text-white hover:-translate-x-2">About</a>
                  <a href="#portfolio" className="transition-transform hover:text-white hover:-translate-x-2">Portfolio</a>
                  <a href="#contact" className="transition-transform hover:text-white hover:-translate-x-2">Contact</a>

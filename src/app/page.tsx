@@ -351,7 +351,7 @@ export default function Portfolio() {
                  Ready to Collaborate?
               </h2>
               <p className={cn("text-lg md:text-xl max-w-2xl", subTextClass)}>
-                 I am currently available for freelance projects and open to full-time opportunities.
+                 I am currently available for freelance opportunities.
               </p>
               <a 
                 href="mailto:seanevansmedia@gmail.com" 

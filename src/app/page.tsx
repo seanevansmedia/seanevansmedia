@@ -20,7 +20,7 @@ const DATA = {
   name: "SEAN EVANS",
   role: "Digital Architect",
   bio: "Engineering for impact. I build mobile-first, high-velocity digital experiences designed to maximize conversions. By achieving 90+ page speeds and seamless responsiveness, I ensure your message reaches every user, instantly.",
-  aboutText: "Hi, I’m Sean Evans. I run a web development agency that specializes in small business website design and development for clients across the U.S. and Canada. My goal is simple: build long-term relationships with clients and help their businesses grow over time."
+  aboutText: "Hi, I’m Sean Evans. I run a web development agency that specializes in small business website design and development for clients across the U.S. and Canada. My goal is simple: build long-term relationships with clients and help their businesses grow over time.",
   stack: ["Next.js", "TypeScript", "React", "Tailwind"],
   features: [
     { title: "Mobile First Design", icon: Smartphone, desc: "Every interaction is crafted for the smallest screen first. I prioritize touch-optimized navigation and content hierarchy." },

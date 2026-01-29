@@ -28,11 +28,47 @@ const DATA = {
     { title: "Fully Responsive", icon: MonitorSmartphone, desc: "Fluid layouts that adapt to any viewport. From 4K ultrawide monitors to tablets and foldables." }
   ],
   projects: [
-    { id: "1", title: "Social Gold", tag: "Social & Firebase", desc: "Real-time social platform replicating Twitter/X functionality. Features live feeds and Google Auth.", img: "https://api.microlink.io/?url=https://social-gold-i2vk.vercel.app/&screenshot=true&meta=false&embed=screenshot.url&waitFor=8s", link: "https://social-gold-i2vk.vercel.app/" },
-    { id: "2", title: "Summit Pacific", tag: "Corporate", desc: "Premium construction management platform with a custom 'Executive' design system.", img: "https://api.microlink.io/?url=https://summit-pacific.vercel.app/&screenshot=true&meta=false&embed=screenshot.url", link: "https://summit-pacific.vercel.app/" },
-    { id: "4", title: "Obsidian Estates", tag: "Real Estate", desc: "Cinematic luxury property platform featuring real-time PostgreSQL filtering.", img: "https://api.microlink.io/?url=https://luxury-real-estate-swart.vercel.app/&screenshot=true&meta=false&embed=screenshot.url", link: "https://luxury-real-estate-swart.vercel.app/" },
-    { id: "5", title: "Vancouver Bistro", tag: "Hospitality", desc: "High-performance restaurant platform built on Next.js 16 with a 'Matcha' design system.", img: "https://api.microlink.io/?url=https://vancouver-bistro.vercel.app/&screenshot=true&meta=false&embed=screenshot.url&waitFor=5s", link: "https://vancouver-bistro.vercel.app/" },
-    { id: "3", title: "Sonic Journal", tag: "AI Audio", desc: "AI-powered mood tracker. Transforms text entries into curated soundtracks.", img: "https://api.microlink.io/?url=https://music-journal-eight.vercel.app&screenshot=true&meta=false&embed=screenshot.url", link: "https://music-journal-eight.vercel.app/" },
+    { 
+      id: "1", 
+      title: "Social Gold", 
+      tag: "Social & Firebase", 
+      desc: "Real-time social platform replicating Twitter/X functionality. Features live feeds and Google Auth.", 
+      // UPDATED LINE: Added viewport sizing and increased wait time to 12s to fix the blank background issue
+      img: "https://api.microlink.io/?url=https://social-gold-i2vk.vercel.app/&screenshot=true&meta=false&embed=screenshot.url&waitFor=12s&viewport.width=1440&viewport.height=900", 
+      link: "https://social-gold-i2vk.vercel.app/" 
+    },
+    { 
+      id: "2", 
+      title: "Summit Pacific", 
+      tag: "Corporate", 
+      desc: "Premium construction management platform with a custom 'Executive' design system.", 
+      img: "https://api.microlink.io/?url=https://summit-pacific.vercel.app/&screenshot=true&meta=false&embed=screenshot.url", 
+      link: "https://summit-pacific.vercel.app/" 
+    },
+    { 
+      id: "4", 
+      title: "Obsidian Estates", 
+      tag: "Real Estate", 
+      desc: "Cinematic luxury property platform featuring real-time PostgreSQL filtering.", 
+      img: "https://api.microlink.io/?url=https://luxury-real-estate-swart.vercel.app/&screenshot=true&meta=false&embed=screenshot.url", 
+      link: "https://luxury-real-estate-swart.vercel.app/" 
+    },
+    { 
+      id: "5", 
+      title: "Vancouver Bistro", 
+      tag: "Hospitality", 
+      desc: "High-performance restaurant platform built on Next.js 16 with a 'Matcha' design system.", 
+      img: "https://api.microlink.io/?url=https://vancouver-bistro.vercel.app/&screenshot=true&meta=false&embed=screenshot.url&waitFor=5s", 
+      link: "https://vancouver-bistro.vercel.app/" 
+    },
+    { 
+      id: "3", 
+      title: "Sonic Journal", 
+      tag: "AI Audio", 
+      desc: "AI-powered mood tracker. Transforms text entries into curated soundtracks.", 
+      img: "https://api.microlink.io/?url=https://music-journal-eight.vercel.app&screenshot=true&meta=false&embed=screenshot.url", 
+      link: "https://music-journal-eight.vercel.app/" 
+    },
   ]
 };
 

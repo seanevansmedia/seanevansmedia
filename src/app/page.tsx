@@ -22,17 +22,52 @@ const DATA = {
   bio: "Engineering for impact. I build mobile-first, high-velocity digital experiences designed to maximize conversions. By achieving 90+ page speeds and seamless responsiveness, I ensure your message reaches every user, instantly.",
   aboutText: "I’m Sean Evans, a web developer specializing in custom websites for small businesses worldwide. I work closely with my clients to create dependable web solutions that grow alongside their business.",
   profileImg: "/profile.jpeg", 
+  projects: [
+    { 
+      id: "1", 
+      title: "Social Gold", 
+      tag: "Social & Firebase", 
+      desc: "Real-time social platform replicating Twitter/X functionality.", 
+      img: "/p1.jpeg", 
+      link: "https://social-gold-i2vk.vercel.app/" 
+    },
+    { 
+      id: "2", 
+      title: "Summit Pacific", 
+      tag: "Corporate", 
+      desc: "Premium construction management platform with a custom design system.", 
+      img: "/p2.jpeg", 
+      link: "https://summit-pacific.vercel.app/" 
+    },
+    { 
+      id: "3", 
+      title: "Obsidian Estates", 
+      tag: "Real Estate", 
+      desc: "Cinematic luxury property platform featuring real-time filtering.", 
+      img: "/p3.jpeg", 
+      link: "https://luxury-real-estate-swart.vercel.app/" 
+    },
+    { 
+      id: "4", 
+      title: "Vancouver Bistro", 
+      tag: "Hospitality", 
+      desc: "High-performance restaurant platform built on Next.js 16.", 
+      img: "/p4.jpeg", 
+      link: "https://vancouver-bistro.vercel.app/" 
+    },
+    { 
+      id: "5", 
+      title: "Sonic Journal", 
+      tag: "AI Audio", 
+      desc: "AI-powered mood tracker transforms text into curated soundtracks.", 
+      img: "/p5.jpeg", 
+      link: "https://music-journal-eight.vercel.app/" 
+    },
+  ],
   features: [
     { title: "Mobile First Design", icon: Smartphone, desc: "Every interaction is crafted for the smallest screen first. I prioritize touch-optimized navigation and content hierarchy." },
     { title: "90+ Lighthouse Scores", icon: Zap, desc: "Speed is a feature. By utilizing Next.js server-side rendering and efficient code-splitting, I deliver near-instant load times." },
     { title: "Fully Responsive", icon: MonitorSmartphone, desc: "Fluid layouts that adapt to any viewport. From 4K ultrawide monitors to tablets and foldables." }
-  ],
-  projects: [
-    { id: "1", title: "Social Gold", tag: "Social & Firebase", desc: "Real-time social platform replicating Twitter/X functionality. Features live feeds and Google Auth.", img: "https://api.microlink.io/?url=https://social-gold-i2vk.vercel.app/&screenshot=true&meta=false&embed=screenshot.url&waitFor=12s&viewport.width=1440&viewport.height=900", link: "https://social-gold-i2vk.vercel.app/" },
-    { id: "2", title: "Summit Pacific", tag: "Corporate", desc: "Premium construction management platform with a custom 'Executive' design system.", img: "https://api.microlink.io/?url=https://summit-pacific.vercel.app/&screenshot=true&meta=false&embed=screenshot.url", link: "https://summit-pacific.vercel.app/" },
-    { id: "4", title: "Obsidian Estates", tag: "Real Estate", desc: "Cinematic luxury property platform featuring real-time PostgreSQL filtering.", img: "https://api.microlink.io/?url=https://luxury-real-estate-swart.vercel.app/&screenshot=true&meta=false&embed=screenshot.url", link: "https://luxury-real-estate-swart.vercel.app/" },
-    { id: "5", title: "Vancouver Bistro", tag: "Hospitality", desc: "High-performance restaurant platform built on Next.js 16 with a 'Matcha' design system.", img: "https://api.microlink.io/?url=https://vancouver-bistro.vercel.app/&screenshot=true&meta=false&embed=screenshot.url&waitFor=5s", link: "https://vancouver-bistro.vercel.app/" },
-    { id: "3", title: "Sonic Journal", tag: "AI Audio", desc: "AI-powered mood tracker. Transforms text entries into curated soundtracks.", img: "https://api.microlink.io/?url=https://music-journal-eight.vercel.app&screenshot=true&meta=false&embed=screenshot.url", link: "https://music-journal-eight.vercel.app/" },
   ]
 };
 
@@ -52,24 +87,24 @@ const Logo = () => (
   </a>
 );
 
-// --- 10 HIGH-FLARE AURORA THEMES ---
+// --- PERFORMANCE AURORA THEMES ---
 const AURORA_THEMES = {
-  "Classic Borealis": "radial-gradient(circle at 20% 30%, #3b82f6 0%, transparent 40%), radial-gradient(circle at 80% 70%, #10b981 0%, transparent 40%), radial-gradient(circle at 50% 50%, #6366f1 0%, transparent 50%)",
-  "Solar Flare": "radial-gradient(circle at 20% 30%, #f97316 0%, transparent 40%), radial-gradient(circle at 80% 70%, #ef4444 0%, transparent 40%), radial-gradient(circle at 50% 50%, #7c2d12 0%, transparent 50%)",
+  "Borealis": "radial-gradient(circle at 20% 30%, #3b82f6 0%, transparent 40%), radial-gradient(circle at 80% 70%, #10b981 0%, transparent 40%), radial-gradient(circle at 50% 50%, #6366f1 0%, transparent 50%)",
+  "Solar": "radial-gradient(circle at 20% 30%, #f97316 0%, transparent 40%), radial-gradient(circle at 80% 70%, #ef4444 0%, transparent 40%), radial-gradient(circle at 50% 50%, #7c2d12 0%, transparent 50%)",
   "Midnight": "radial-gradient(circle at 20% 30%, #8b5cf6 0%, transparent 40%), radial-gradient(circle at 80% 70%, #4338ca 0%, transparent 40%), radial-gradient(circle at 50% 50%, #2e1065 0%, transparent 50%)",
-  "Cyber Glow": "radial-gradient(circle at 20% 30%, #ec4899 0%, transparent 40%), radial-gradient(circle at 80% 70%, #06b6d4 0%, transparent 40%), radial-gradient(circle at 50% 50%, #4c1d95 0%, transparent 50%)",
-  "Oceanic": "radial-gradient(circle at 20% 30%, #0ea5e9 0%, transparent 40%), radial-gradient(circle at 80% 70%, #2563eb 0%, transparent 40%), radial-gradient(circle at 50% 50%, #0c4a6e 0%, transparent 50%)",
+  "Cyber": "radial-gradient(circle at 20% 30%, #ec4899 0%, transparent 40%), radial-gradient(circle at 80% 70%, #06b6d4 0%, transparent 40%), radial-gradient(circle at 50% 50%, #4c1d95 0%, transparent 50%)",
+  "Ocean": "radial-gradient(circle at 20% 30%, #0ea5e9 0%, transparent 40%), radial-gradient(circle at 80% 70%, #2563eb 0%, transparent 40%), radial-gradient(circle at 50% 50%, #0c4a6e 0%, transparent 50%)",
   "Toxic": "radial-gradient(circle at 20% 30%, #a3e635 0%, transparent 40%), radial-gradient(circle at 80% 70%, #059669 0%, transparent 40%), radial-gradient(circle at 50% 50%, #064e3b 0%, transparent 50%)",
-  "Volcanic": "radial-gradient(circle at 20% 30%, #ef4444 0%, transparent 40%), radial-gradient(circle at 80% 70%, #000000 0%, transparent 40%), radial-gradient(circle at 50% 50%, #450a0a 0%, transparent 50%)",
-  "Ice Tundra": "radial-gradient(circle at 20% 30%, #f8fafc 0%, transparent 40%), radial-gradient(circle at 80% 70%, #60a5fa 0%, transparent 40%), radial-gradient(circle at 50% 50%, #1e293b 0%, transparent 50%)",
-  "Golden Aura": "radial-gradient(circle at 20% 30%, #facc15 0%, transparent 40%), radial-gradient(circle at 80% 70%, #d97706 0%, transparent 40%), radial-gradient(circle at 50% 50%, #451a03 0%, transparent 50%)",
-  "Deep Ember": "radial-gradient(circle at 20% 30%, #fb923c 0%, transparent 40%), radial-gradient(circle at 80% 70%, #7c2d12 0%, transparent 40%), radial-gradient(circle at 50% 50%, #000000 0%, transparent 50%)",
+  "Volcano": "radial-gradient(circle at 20% 30%, #ef4444 0%, transparent 40%), radial-gradient(circle at 80% 70%, #000000 0%, transparent 40%), radial-gradient(circle at 50% 50%, #450a0a 0%, transparent 50%)",
+  "Ice": "radial-gradient(circle at 20% 30%, #f8fafc 0%, transparent 40%), radial-gradient(circle at 80% 70%, #60a5fa 0%, transparent 40%), radial-gradient(circle at 50% 50%, #1e293b 0%, transparent 50%)",
+  "Gold": "radial-gradient(circle at 20% 30%, #facc15 0%, transparent 40%), radial-gradient(circle at 80% 70%, #d97706 0%, transparent 40%), radial-gradient(circle at 50% 50%, #451a03 0%, transparent 50%)",
+  "Ember": "radial-gradient(circle at 20% 30%, #fb923c 0%, transparent 40%), radial-gradient(circle at 80% 70%, #7c2d12 0%, transparent 40%), radial-gradient(circle at 50% 50%, #000000 0%, transparent 50%)",
 };
 
 export default function Portfolio() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const [currentTheme, setCurrentTheme] = useState<keyof typeof AURORA_THEMES>("Classic Borealis");
+  const [currentTheme, setCurrentTheme] = useState<keyof typeof AURORA_THEMES>("Borealis");
   const [showPicker, setShowPicker] = useState(false);
 
   const glassClass = "bg-black/40 border-white/10 backdrop-blur-md";
@@ -105,7 +140,7 @@ export default function Portfolio() {
         />
       </div>
 
-      {/* MASTER THEME SWITCHER HUB */}
+      {/* MASTER THEME SWITCHER */}
       <div className="fixed bottom-6 right-6 z-[100]">
         <button onClick={() => setShowPicker(!showPicker)} className="p-4 rounded-full bg-white text-black shadow-2xl hover:scale-110 active:scale-95 transition-all flex items-center gap-2">
           <Palette size={20} />
@@ -114,13 +149,11 @@ export default function Portfolio() {
         <AnimatePresence>
           {showPicker && (
             <motion.div initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: 15 }} className="absolute bottom-16 right-0 bg-black/95 border border-white/20 p-2 rounded-2xl backdrop-blur-xl w-48 shadow-2xl">
-              <div className="flex flex-col gap-1">
                 {Object.keys(AURORA_THEMES).map((t) => (
                   <button key={t} onClick={() => { setCurrentTheme(t as any); setShowPicker(false); }} className={cn("w-full text-left px-3 py-2 rounded-lg text-[10px] font-bold uppercase tracking-widest transition-all", currentTheme === t ? "bg-cyan-500 text-white" : "text-neutral-400 hover:text-white hover:bg-white/10")}>
                     {t}
                   </button>
                 ))}
-              </div>
             </motion.div>
           )}
         </AnimatePresence>
@@ -136,11 +169,8 @@ export default function Portfolio() {
                 <a key={item} href={`#${item.toLowerCase()}`} className="px-4 py-2 text-sm font-bold uppercase tracking-wider text-white hover:bg-white/10 rounded-full transition-all">{item}</a>
              ))}
              
-             {/* RESTORED: SHIMMER CONTACT BUTTON */}
-             <a 
-               href="#contact" 
-               className="group relative px-6 py-2.5 rounded-full text-sm font-bold uppercase tracking-wider overflow-hidden shadow-lg hover:shadow-[0_0_20px_rgba(0,255,255,0.4)] active:scale-95 transition-all duration-300 bg-white text-black"
-             >
+             {/* ORIGINAL SHIMMER CONTACT BUTTON */}
+             <a href="#contact" className="group relative px-6 py-2.5 rounded-full text-sm font-bold uppercase tracking-wider overflow-hidden shadow-lg hover:shadow-[0_0_20px_rgba(0,255,255,0.4)] active:scale-95 transition-all duration-300 bg-white text-black">
                <div className="absolute inset-0 -translate-x-[100%] group-hover:translate-x-[100%] transition-transform duration-700 ease-in-out skew-x-12 bg-gradient-to-r from-transparent via-cyan-400/50 to-transparent" />
                <div className="relative z-10 flex items-center gap-2">
                  <span>Contact</span>
@@ -170,7 +200,7 @@ export default function Portfolio() {
               <div className="relative shrink-0">
                  <div className="absolute inset-0 bg-cyan-500/20 blur-3xl rounded-full animate-pulse" />
                  <div className="relative w-48 h-48 md:w-64 md:h-64 lg:w-80 lg:h-80 rounded-2xl overflow-hidden border-2 border-white/20 shadow-2xl transition-transform duration-500 hover:rotate-0 rotate-3 bg-neutral-900">
-                    <Image src={DATA.profileImg} alt="Sean Evans" fill priority quality={90} sizes="(max-width: 768px) 192px, (max-width: 1024px) 256px, 320px" className="object-cover" />
+                    <Image src={DATA.profileImg} alt="Sean Evans" fill priority quality={90} sizes="(max-width: 768px) 192px, 320px" className="object-cover" />
                  </div>
               </div>
            </motion.div>
@@ -181,12 +211,17 @@ export default function Portfolio() {
            <h3 className="text-4xl md:text-5xl font-bold tracking-tighter mb-12 border-b border-white/10 pb-4 text-white">Portfolio</h3>
            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-12">
               {DATA.projects.map((project) => (
-                 <motion.a href={project.link} target="_blank" key={project.id}
-                   initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
+                 <a href={project.link} target="_blank" key={project.id}
                    className={cn("group relative p-4 md:p-6 rounded-2xl transition-all duration-500", glassClass)}
                  >
                     <div className="relative aspect-video overflow-hidden rounded-lg mb-6 border border-white/10 bg-neutral-950">
-                       <Image src={project.img} alt={project.title} fill unoptimized className="object-cover object-top transition-transform duration-700 group-hover:scale-105" />
+                       <Image 
+                        src={project.img} 
+                        alt={project.title} 
+                        fill 
+                        sizes="(max-width: 768px) 100vw, 50vw"
+                        className="object-cover object-top transition-transform duration-700 group-hover:scale-105" 
+                      />
                     </div>
                     <div className="flex justify-between items-end">
                        <div>
@@ -196,7 +231,7 @@ export default function Portfolio() {
                        </div>
                        <div className="p-3 rounded-full bg-white text-black group-hover:scale-110 transition-transform"><ArrowUpRight size={24} /></div>
                     </div>
-                 </motion.a>
+                 </a>
               ))}
            </div>
         </section>
@@ -207,7 +242,6 @@ export default function Portfolio() {
             <h1 className="text-5xl md:text-9xl font-bold leading-[0.9] tracking-tighter mb-12 text-white">
               Design is <br /> Intelligence <br /> <span className="opacity-40">Made Visible.</span>
             </h1>
-            {/* Bio constrained to match heading width footprint */}
             <p className="text-xl max-w-2xl border-t border-white/10 pt-8 text-white leading-relaxed font-medium">
               {DATA.bio}
             </p>

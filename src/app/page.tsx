@@ -20,49 +20,14 @@ const DATA = {
   name: "SEAN EVANS",
   role: "Digital Architect",
   bio: "Engineering for impact. I build mobile-first, high-velocity digital experiences designed to maximize conversions. By achieving 90+ page speeds and seamless responsiveness, I ensure your message reaches every user, instantly.",
-  aboutText: "I’m a web developer located in Vancouver, Canada. I specialize in custom websites for small businesses worldwide. I work closely with my clients to create dependable web solutions that grow their business.",
+  aboutText: "I’m a web developer from Vancouver, Canada. I specialize in custom websites for small businesses worldwide. I work closely with my clients to create dependable web solutions that grow their business.",
   profileImg: "/profile.jpeg", 
   projects: [
-    { 
-      id: "1", 
-      title: "Social Gold", 
-      tag: "Social & Firebase", 
-      desc: "Real-time social platform replicating Twitter/X functionality.", 
-      img: "/p1.jpeg", 
-      link: "https://social-gold-i2vk.vercel.app/" 
-    },
-    { 
-      id: "2", 
-      title: "Summit Pacific", 
-      tag: "Corporate", 
-      desc: "Premium construction management platform with a custom design system.", 
-      img: "/p2.jpeg", 
-      link: "https://summit-pacific.vercel.app/" 
-    },
-    { 
-      id: "3", 
-      title: "Obsidian Estates", 
-      tag: "Real Estate", 
-      desc: "Cinematic luxury property platform featuring real-time filtering.", 
-      img: "/p3.jpeg", 
-      link: "https://luxury-real-estate-swart.vercel.app/" 
-    },
-    { 
-      id: "4", 
-      title: "Vancouver Bistro", 
-      tag: "Hospitality", 
-      desc: "High-performance restaurant platform built on Next.js 16.", 
-      img: "/p4.jpeg", 
-      link: "https://vancouver-bistro.vercel.app/" 
-    },
-    { 
-      id: "5", 
-      title: "Sonic Journal", 
-      tag: "AI Audio", 
-      desc: "AI-powered mood tracker transforms text into curated soundtracks.", 
-      img: "/p5.jpeg", 
-      link: "https://music-journal-eight.vercel.app/" 
-    },
+    { id: "1", title: "Social Gold", tag: "Social & Firebase", desc: "Real-time social platform replicating Twitter/X functionality.", img: "/p1.jpeg", link: "https://social-gold-i2vk.vercel.app/" },
+    { id: "2", title: "Summit Pacific", tag: "Corporate", desc: "Premium construction management platform with a custom design system.", img: "/p2.jpeg", link: "https://summit-pacific.vercel.app/" },
+    { id: "3", title: "Obsidian Estates", tag: "Real Estate", desc: "Cinematic luxury property platform featuring real-time filtering.", img: "/p3.jpeg", link: "https://luxury-real-estate-swart.vercel.app/" },
+    { id: "4", title: "Vancouver Bistro", tag: "Hospitality", desc: "High-performance restaurant platform built on Next.js 16.", img: "/p4.jpeg", link: "https://vancouver-bistro.vercel.app/" },
+    { id: "5", title: "Sonic Journal", tag: "AI Audio", desc: "AI-powered mood tracker transforms text into curated soundtracks.", img: "/p5.jpeg", link: "https://music-journal-eight.vercel.app/" },
   ],
   features: [
     { title: "Mobile First Design", icon: Smartphone, desc: "Every interaction is crafted for the smallest screen first. I prioritize touch-optimized navigation and content hierarchy." },
@@ -87,18 +52,18 @@ const Logo = () => (
   </a>
 );
 
-// --- PERFORMANCE AURORA THEMES ---
+// --- PERFORMANCE THEMES ---
 const AURORA_THEMES = {
   "Borealis": "radial-gradient(circle at 20% 30%, #3b82f6 0%, transparent 40%), radial-gradient(circle at 80% 70%, #10b981 0%, transparent 40%), radial-gradient(circle at 50% 50%, #6366f1 0%, transparent 50%)",
-  "Solar": "radial-gradient(circle at 20% 30%, #f97316 0%, transparent 40%), radial-gradient(circle at 80% 70%, #ef4444 0%, transparent 40%), radial-gradient(circle at 50% 50%, #7c2d12 0%, transparent 50%)",
+  "Solar Flare": "radial-gradient(circle at 20% 30%, #f97316 0%, transparent 40%), radial-gradient(circle at 80% 70%, #ef4444 0%, transparent 40%), radial-gradient(circle at 50% 50%, #7c2d12 0%, transparent 50%)",
   "Midnight": "radial-gradient(circle at 20% 30%, #8b5cf6 0%, transparent 40%), radial-gradient(circle at 80% 70%, #4338ca 0%, transparent 40%), radial-gradient(circle at 50% 50%, #2e1065 0%, transparent 50%)",
-  "Cyber": "radial-gradient(circle at 20% 30%, #ec4899 0%, transparent 40%), radial-gradient(circle at 80% 70%, #06b6d4 0%, transparent 40%), radial-gradient(circle at 50% 50%, #4c1d95 0%, transparent 50%)",
-  "Ocean": "radial-gradient(circle at 20% 30%, #0ea5e9 0%, transparent 40%), radial-gradient(circle at 80% 70%, #2563eb 0%, transparent 40%), radial-gradient(circle at 50% 50%, #0c4a6e 0%, transparent 50%)",
+  "Cyber Glow": "radial-gradient(circle at 20% 30%, #ec4899 0%, transparent 40%), radial-gradient(circle at 80% 70%, #06b6d4 0%, transparent 40%), radial-gradient(circle at 50% 50%, #4c1d95 0%, transparent 50%)",
+  "Oceanic": "radial-gradient(circle at 20% 30%, #0ea5e9 0%, transparent 40%), radial-gradient(circle at 80% 70%, #2563eb 0%, transparent 40%), radial-gradient(circle at 50% 50%, #0c4a6e 0%, transparent 50%)",
   "Toxic": "radial-gradient(circle at 20% 30%, #a3e635 0%, transparent 40%), radial-gradient(circle at 80% 70%, #059669 0%, transparent 40%), radial-gradient(circle at 50% 50%, #064e3b 0%, transparent 50%)",
-  "Volcano": "radial-gradient(circle at 20% 30%, #ef4444 0%, transparent 40%), radial-gradient(circle at 80% 70%, #000000 0%, transparent 40%), radial-gradient(circle at 50% 50%, #450a0a 0%, transparent 50%)",
-  "Ice": "radial-gradient(circle at 20% 30%, #f8fafc 0%, transparent 40%), radial-gradient(circle at 80% 70%, #60a5fa 0%, transparent 40%), radial-gradient(circle at 50% 50%, #1e293b 0%, transparent 50%)",
-  "Gold": "radial-gradient(circle at 20% 30%, #facc15 0%, transparent 40%), radial-gradient(circle at 80% 70%, #d97706 0%, transparent 40%), radial-gradient(circle at 50% 50%, #451a03 0%, transparent 50%)",
-  "Ember": "radial-gradient(circle at 20% 30%, #fb923c 0%, transparent 40%), radial-gradient(circle at 80% 70%, #7c2d12 0%, transparent 40%), radial-gradient(circle at 50% 50%, #000000 0%, transparent 50%)",
+  "Volcanic": "radial-gradient(circle at 20% 30%, #ef4444 0%, transparent 40%), radial-gradient(circle at 80% 70%, #000000 0%, transparent 40%), radial-gradient(circle at 50% 50%, #450a0a 0%, transparent 50%)",
+  "Ice Tundra": "radial-gradient(circle at 20% 30%, #f8fafc 0%, transparent 40%), radial-gradient(circle at 80% 70%, #60a5fa 0%, transparent 40%), radial-gradient(circle at 50% 50%, #1e293b 0%, transparent 50%)",
+  "Golden Aura": "radial-gradient(circle at 20% 30%, #facc15 0%, transparent 40%), radial-gradient(circle at 80% 70%, #d97706 0%, transparent 40%), radial-gradient(circle at 50% 50%, #451a03 0%, transparent 50%)",
+  "Deep Ember": "radial-gradient(circle at 20% 30%, #fb923c 0%, transparent 40%), radial-gradient(circle at 80% 70%, #7c2d12 0%, transparent 40%), radial-gradient(circle at 50% 50%, #000000 0%, transparent 50%)",
 };
 
 export default function Portfolio() {
@@ -135,7 +100,7 @@ export default function Portfolio() {
       {/* BACKGROUND LAYER */}
       <div className="fixed inset-0 z-0 bg-[#020617] overflow-hidden pointer-events-none">
         <div 
-          className="absolute top-[-10%] left-[-10%] w-[120%] h-[120%] opacity-40 blur-[100px] aurora-container transition-all duration-1000"
+          className="absolute top-[-15%] left-[-15%] w-[130%] h-[130%] opacity-40 blur-[110px] aurora-container transition-all duration-1000"
           style={{ background: AURORA_THEMES[currentTheme] }}
         />
       </div>
@@ -144,23 +109,24 @@ export default function Portfolio() {
       <div className="fixed bottom-6 right-6 z-[100]">
         <button onClick={() => setShowPicker(!showPicker)} className="p-4 rounded-full bg-white text-black shadow-2xl hover:scale-110 active:scale-95 transition-all flex items-center gap-2">
           <Palette size={20} />
-          <span className="text-[10px] font-bold uppercase tracking-widest hidden md:block">Switch Style</span>
+          <span className="text-[10px] font-bold uppercase tracking-widest hidden md:block">Switch Flare</span>
         </button>
         <AnimatePresence>
           {showPicker && (
-            <motion.div initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: 15 }} className="absolute bottom-16 right-0 bg-black/95 border border-white/20 p-2 rounded-2xl backdrop-blur-xl w-48 shadow-2xl">
-                {Object.keys(AURORA_THEMES).map((t) => (
-                  <button key={t} onClick={() => { setCurrentTheme(t as any); setShowPicker(false); }} className={cn("w-full text-left px-3 py-2 rounded-lg text-[10px] font-bold uppercase tracking-widest transition-all", currentTheme === t ? "bg-cyan-500 text-white" : "text-neutral-400 hover:text-white hover:bg-white/10")}>
-                    {t}
-                  </button>
-                ))}
+            <motion.div initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: 15 }} className="absolute bottom-16 right-0 bg-black/95 border border-white/20 p-2 rounded-2xl backdrop-blur-xl w-48 shadow-2xl overflow-hidden">
+                <div className="flex flex-col gap-1">
+                  {Object.keys(AURORA_THEMES).map((t) => (
+                    <button key={t} onClick={() => { setCurrentTheme(t as any); setShowPicker(false); }} className={cn("w-full text-left px-3 py-2 rounded-lg text-[10px] font-bold uppercase tracking-widest transition-all", currentTheme === t ? "bg-cyan-500 text-white" : "text-neutral-400 hover:text-white hover:bg-white/10")}>
+                      {t}
+                    </button>
+                  ))}
+                </div>
             </motion.div>
           )}
         </AnimatePresence>
       </div>
 
       <div className="relative z-10 h-full">
-        
         {/* NAVIGATION */}
         <nav className={cn("fixed top-0 w-full z-50 flex justify-between items-center border-b backdrop-blur-md transition-all duration-300", isScrolled ? "py-4 px-6 md:px-12 bg-black/80 border-white/10" : "py-6 md:py-8 bg-transparent border-transparent px-6 md:px-8")}>
           <Logo />
@@ -168,8 +134,7 @@ export default function Portfolio() {
              {["About", "Portfolio"].map((item) => (
                 <a key={item} href={`#${item.toLowerCase()}`} className="px-4 py-2 text-sm font-bold uppercase tracking-wider text-white hover:bg-white/10 rounded-full transition-all">{item}</a>
              ))}
-             
-             {/* ORIGINAL SHIMMER CONTACT BUTTON */}
+             {/* RESTORED: SHIMMER CONTACT BUTTON */}
              <a href="#contact" className="group relative px-6 py-2.5 rounded-full text-sm font-bold uppercase tracking-wider overflow-hidden shadow-lg hover:shadow-[0_0_20px_rgba(0,255,255,0.4)] active:scale-95 transition-all duration-300 bg-white text-black">
                <div className="absolute inset-0 -translate-x-[100%] group-hover:translate-x-[100%] transition-transform duration-700 ease-in-out skew-x-12 bg-gradient-to-r from-transparent via-cyan-400/50 to-transparent" />
                <div className="relative z-10 flex items-center gap-2">
@@ -178,10 +143,37 @@ export default function Portfolio() {
                </div>
              </a>
           </div>
-          <button onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} className="md:hidden text-white p-2">
+          
+          {/* MOBILE TOGGLE BUTTON */}
+          <button 
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} 
+            className="md:hidden relative z-50 p-2 text-white bg-white/10 rounded-full"
+          >
             {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
           </button>
         </nav>
+
+        {/* MOBILE MENU OVERLAY (RESTORED) */}
+        <AnimatePresence>
+          {isMobileMenuOpen && (
+            <motion.div 
+              initial={{ opacity: 0, x: "100%" }} 
+              animate={{ opacity: 1, x: 0 }} 
+              exit={{ opacity: 0, x: "100%" }} 
+              transition={{ type: "spring", damping: 25, stiffness: 200 }}
+              className="fixed inset-0 z-40 pt-32 px-6 flex flex-col gap-8 md:hidden bg-black text-white"
+            >
+               {["About", "Portfolio", "Contact"].map((item) => (
+                  <a key={item} href={`#${item.toLowerCase()}`} onClick={() => setIsMobileMenuOpen(false)} className="text-4xl font-black tracking-tighter border-b border-white/20 pb-4">
+                    {item}
+                  </a>
+               ))}
+               <div className="mt-auto pb-12 opacity-50 text-xs font-bold uppercase tracking-widest text-cyan-200">
+                  © SEAN EVANS MEDIA 2026
+               </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
 
         {/* --- SECTION 1: ABOUT (HERO) --- */}
         <section id="about" className="px-6 md:px-24 pt-28 pb-12 md:pt-40 max-w-7xl mx-auto flex flex-col justify-start">
@@ -215,13 +207,7 @@ export default function Portfolio() {
                    className={cn("group relative p-4 md:p-6 rounded-2xl transition-all duration-500", glassClass)}
                  >
                     <div className="relative aspect-video overflow-hidden rounded-lg mb-6 border border-white/10 bg-neutral-950">
-                       <Image 
-                        src={project.img} 
-                        alt={project.title} 
-                        fill 
-                        sizes="(max-width: 768px) 100vw, 50vw"
-                        className="object-cover object-top transition-transform duration-700 group-hover:scale-105" 
-                      />
+                       <Image src={project.img} alt={project.title} fill sizes="(max-width: 768px) 100vw, 50vw" className="object-cover object-top transition-transform duration-700 group-hover:scale-105" />
                     </div>
                     <div className="flex justify-between items-end">
                        <div>
@@ -237,7 +223,7 @@ export default function Portfolio() {
         </section>
 
         {/* --- SECTION 3: PHILOSOPHY (CONSTRAINED WIDTH) --- */}
-        <section className="px-6 md:px-24 pb-12 max-w-7xl mx-auto">
+        <section className="px-6 md:px-24 pb-12 max-w-7xl mx-auto text-left">
             <h2 className="text-xs font-bold uppercase tracking-[0.2em] mb-6 text-pink-300 uppercase tracking-[0.2em]">{DATA.role}</h2>
             <h1 className="text-5xl md:text-9xl font-bold leading-[0.9] tracking-tighter mb-12 text-white">
               Design is <br /> Intelligence <br /> <span className="opacity-40">Made Visible.</span>

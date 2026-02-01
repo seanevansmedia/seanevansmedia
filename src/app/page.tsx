@@ -20,7 +20,7 @@ const DATA = {
   name: "SEAN EVANS",
   role: "Digital Architect",
   bio: "Engineering for impact. I build mobile-first, high-velocity digital experiences designed to maximize conversions. By achieving 90+ page speeds and seamless responsiveness, I ensure your message reaches every user, instantly.",
-  aboutText: "I’m Sean Evans, a web developer specializing in custom websites for small businesses worldwide. I work closely with my clients to create dependable web solutions that grow alongside their business.",
+  aboutText: "I’m a web developer located in Vancouver, Canada. I specialize in custom websites for small businesses worldwide. I work closely with my clients to create dependable web solutions that grow their business.",
   profileImg: "/profile.jpeg", 
   projects: [
     { 

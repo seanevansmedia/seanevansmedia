@@ -23,19 +23,19 @@ const DATA = {
   aboutText: "I’m a web developer from Vancouver, Canada. I specialize in custom websites for small businesses worldwide. I work closely with my clients to create dependable web solutions that grow their business.",
   profileImg: "/profile.jpeg", 
   projects: [
+    { id: "1", title: "Social Gold", tag: "Social & Firebase", desc: "Real-time social platform replicating Twitter/X functionality.", img: "/p1.jpeg", link: "https://social-gold-i2vk.vercel.app/" },
+    { id: "2", title: "Summit Pacific", tag: "Corporate", desc: "Premium construction management platform with a custom design system.", img: "/p2.jpeg", link: "https://summit-pacific.vercel.app/" },
+    { id: "3", title: "Obsidian Estates", tag: "Real Estate", desc: "Cinematic luxury property platform featuring real-time filtering.", img: "/p3.jpeg", link: "https://luxury-real-estate-swart.vercel.app/" },
+    { id: "4", title: "Vancouver Bistro", tag: "Hospitality", desc: "High-performance restaurant platform built on Next.js 16.", img: "/p4.jpeg", link: "https://vancouver-bistro.vercel.app/" },
+    { id: "5", title: "Sonic Journal", tag: "AI Audio", desc: "AI-powered mood tracker transforms text into curated soundtracks.", img: "/p5.jpeg", link: "https://music-journal-eight.vercel.app/" },
     { 
       id: "6", 
       title: "ProPlumb", 
       tag: "Service & Conversion", 
       desc: "High-converting landing page for a plumbing company featuring IP-based geolocation.", 
       img: "/p6.jpeg", 
-      link: "https://proplumb-3d2m7cz60-seanevansmedias-projects.vercel.app/" 
+      link: "https://proplumb-coral.vercel.app/" 
     },
-    { id: "2", title: "Summit Pacific", tag: "Corporate", desc: "Premium construction management platform with a custom design system.", img: "/p2.jpeg", link: "https://summit-pacific.vercel.app/" },
-    { id: "3", title: "Obsidian Estates", tag: "Real Estate", desc: "Cinematic luxury property platform featuring real-time filtering.", img: "/p3.jpeg", link: "https://luxury-real-estate-swart.vercel.app/" },
-    { id: "4", title: "Vancouver Bistro", tag: "Hospitality", desc: "High-performance restaurant platform built on Next.js 16.", img: "/p4.jpeg", link: "https://vancouver-bistro.vercel.app/" },
-    { id: "5", title: "Sonic Journal", tag: "AI Audio", desc: "AI-powered mood tracker transforms text into curated soundtracks.", img: "/p5.jpeg", link: "https://music-journal-eight.vercel.app/" },
-    { id: "1", title: "Social Gold", tag: "Social & Firebase", desc: "Real-time social platform replicating Twitter/X functionality.", img: "/p1.jpeg", link: "https://social-gold-i2vk.vercel.app/" },
   ],
   features: [
     { title: "Mobile First Design", icon: Smartphone, desc: "Every interaction is crafted for the smallest screen first. I prioritize touch-optimized navigation and content hierarchy." },
@@ -77,7 +77,7 @@ const AURORA_THEMES = {
 export default function Portfolio() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const [currentTheme, setCurrentTheme] = useState<keyof typeof AURORA_THEMES>("Borealis");
+  const [currentTheme, setCurrentTheme] = useState<keyof typeof AURORA_THEMES>("Cyber Glow");
   const [showPicker, setShowPicker] = useState(false);
 
   const glassClass = "bg-black/40 border-white/10 backdrop-blur-md";

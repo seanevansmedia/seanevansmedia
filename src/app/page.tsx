@@ -23,11 +23,19 @@ const DATA = {
   aboutText: "I’m a web developer from Vancouver, Canada. I specialize in custom websites for small businesses worldwide. I work closely with my clients to create dependable web solutions that grow their business.",
   profileImg: "/profile.jpeg", 
   projects: [
-    { id: "1", title: "Social Gold", tag: "Social & Firebase", desc: "Real-time social platform replicating Twitter/X functionality.", img: "/p1.jpeg", link: "https://social-gold-i2vk.vercel.app/" },
+    { 
+      id: "6", 
+      title: "ProPlumb", 
+      tag: "Service & Conversion", 
+      desc: "High-converting landing page for a plumbing company featuring IP-based geolocation.", 
+      img: "/p6.jpeg", 
+      link: "https://proplumb-3d2m7cz60-seanevansmedias-projects.vercel.app/" 
+    },
     { id: "2", title: "Summit Pacific", tag: "Corporate", desc: "Premium construction management platform with a custom design system.", img: "/p2.jpeg", link: "https://summit-pacific.vercel.app/" },
     { id: "3", title: "Obsidian Estates", tag: "Real Estate", desc: "Cinematic luxury property platform featuring real-time filtering.", img: "/p3.jpeg", link: "https://luxury-real-estate-swart.vercel.app/" },
     { id: "4", title: "Vancouver Bistro", tag: "Hospitality", desc: "High-performance restaurant platform built on Next.js 16.", img: "/p4.jpeg", link: "https://vancouver-bistro.vercel.app/" },
     { id: "5", title: "Sonic Journal", tag: "AI Audio", desc: "AI-powered mood tracker transforms text into curated soundtracks.", img: "/p5.jpeg", link: "https://music-journal-eight.vercel.app/" },
+    { id: "1", title: "Social Gold", tag: "Social & Firebase", desc: "Real-time social platform replicating Twitter/X functionality.", img: "/p1.jpeg", link: "https://social-gold-i2vk.vercel.app/" },
   ],
   features: [
     { title: "Mobile First Design", icon: Smartphone, desc: "Every interaction is crafted for the smallest screen first. I prioritize touch-optimized navigation and content hierarchy." },
@@ -134,7 +142,6 @@ export default function Portfolio() {
              {["About", "Portfolio"].map((item) => (
                 <a key={item} href={`#${item.toLowerCase()}`} className="px-4 py-2 text-sm font-bold uppercase tracking-wider text-white hover:bg-white/10 rounded-full transition-all">{item}</a>
              ))}
-             {/* RESTORED: SHIMMER CONTACT BUTTON */}
              <a href="#contact" className="group relative px-6 py-2.5 rounded-full text-sm font-bold uppercase tracking-wider overflow-hidden shadow-lg hover:shadow-[0_0_20px_rgba(0,255,255,0.4)] active:scale-95 transition-all duration-300 bg-white text-black">
                <div className="absolute inset-0 -translate-x-[100%] group-hover:translate-x-[100%] transition-transform duration-700 ease-in-out skew-x-12 bg-gradient-to-r from-transparent via-cyan-400/50 to-transparent" />
                <div className="relative z-10 flex items-center gap-2">
@@ -144,7 +151,6 @@ export default function Portfolio() {
              </a>
           </div>
           
-          {/* MOBILE TOGGLE BUTTON */}
           <button 
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} 
             className="md:hidden relative z-50 p-2 text-white bg-white/10 rounded-full"
@@ -153,7 +159,6 @@ export default function Portfolio() {
           </button>
         </nav>
 
-        {/* MOBILE MENU OVERLAY (RESTORED) */}
         <AnimatePresence>
           {isMobileMenuOpen && (
             <motion.div 
@@ -188,7 +193,6 @@ export default function Portfolio() {
                 </div>
               </div>
 
-              {/* PROFILE IMAGE */}
               <div className="relative shrink-0">
                  <div className="absolute inset-0 bg-cyan-500/20 blur-3xl rounded-full animate-pulse" />
                  <div className="relative w-48 h-48 md:w-64 md:h-64 lg:w-80 lg:h-80 rounded-2xl overflow-hidden border-2 border-white/20 shadow-2xl transition-transform duration-500 hover:rotate-0 rotate-3 bg-neutral-900">
@@ -222,9 +226,9 @@ export default function Portfolio() {
            </div>
         </section>
 
-        {/* --- SECTION 3: PHILOSOPHY (CONSTRAINED WIDTH) --- */}
+        {/* --- SECTION 3: PHILOSOPHY --- */}
         <section className="px-6 md:px-24 pb-12 max-w-7xl mx-auto text-left">
-            <h2 className="text-xs font-bold uppercase tracking-[0.2em] mb-6 text-pink-300 uppercase tracking-[0.2em]">{DATA.role}</h2>
+            <h2 className="text-xs font-bold uppercase tracking-[0.2em] mb-6 text-pink-300">{DATA.role}</h2>
             <h1 className="text-5xl md:text-9xl font-bold leading-[0.9] tracking-tighter mb-12 text-white">
               Design is <br /> Intelligence <br /> <span className="opacity-40">Made Visible.</span>
             </h1>
@@ -233,7 +237,7 @@ export default function Portfolio() {
             </p>
         </section>
 
-        {/* --- SECTION 4: FEATURES (CENTERED CONTENT) --- */}
+        {/* --- SECTION 4: FEATURES --- */}
         <section className="px-6 md:px-24 pb-24 pt-4 max-w-7xl mx-auto">
            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {DATA.features.map((feature, i) => (

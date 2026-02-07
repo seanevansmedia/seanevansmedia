@@ -20,12 +20,11 @@ const DATA = {
   name: "SEAN EVANS",
   role: "Digital Architect",
   bio: "Engineering for impact. I build mobile-first, high-velocity digital experiences designed to maximize conversions. By achieving 90+ page speeds and seamless responsiveness, I ensure your message reaches every user, instantly.",
-  aboutText: "I’m a web developer & designer from Vancouver, Canada. I specialize in custom websites for small businesses worldwide. I work closely with my clients to create dependable web solutions that grow their business.",
+  aboutText: "I’m a web developer from Vancouver, Canada. I specialize in custom websites for small businesses worldwide. I work closely with my clients to create dependable web solutions that grow their business.",
   profileImg: "/profile.jpeg", 
   projects: [
     { id: "4", title: "Vancouver Bistro", tag: "Hospitality", desc: "High-performance restaurant platform built on Next.js 16.", img: "/p4.jpeg", link: "https://vancouver-bistro.vercel.app/" },
     { id: "2", title: "Summit Pacific", tag: "Corporate", desc: "Premium construction management platform with a custom design system.", img: "/p2.jpeg", link: "https://summit-pacific.vercel.app/" },
-    { id: "3", title: "Obsidian Estates", tag: "Real Estate", desc: "Cinematic luxury property platform featuring real-time filtering.", img: "/p3.jpeg", link: "https://luxury-real-estate-swart.vercel.app/" },
     { 
       id: "6", 
       title: "ProPlumb", 
@@ -34,6 +33,7 @@ const DATA = {
       img: "/p6.jpeg", 
       link: "https://proplumb-coral.vercel.app/" 
     },
+    { id: "3", title: "Obsidian Estates", tag: "Real Estate", desc: "Cinematic luxury property platform featuring real-time filtering.", img: "/p3.jpeg", link: "https://luxury-real-estate-swart.vercel.app/" },
     { id: "5", title: "Sonic Journal", tag: "AI Audio", desc: "AI-powered mood tracker transforms text into curated soundtracks.", img: "/p5.jpeg", link: "https://music-journal-eight.vercel.app/" },
     { id: "1", title: "Social Gold", tag: "Social & Firebase", desc: "Real-time social platform replicating Twitter/X functionality.", img: "/p1.jpeg", link: "https://social-gold-i2vk.vercel.app/" },
   ],

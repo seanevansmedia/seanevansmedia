@@ -27,11 +27,11 @@ const DATA = {
     { id: "2", title: "Summit Pacific", tag: "Corporate", desc: "Premium construction management platform with a custom design system.", img: "/p2.jpeg", link: "https://summit-pacific.vercel.app/" },
     { 
       id: "6", 
-      title: "ProPlumb", 
-      tag: "Service & Conversion", 
-      desc: "High-converting landing page for a plumbing company featuring IP-based geolocation.", 
+      title: "Blue Dove Marketing", 
+      tag: "Marketing & Strategy", 
+      desc: "A full-service digital marketing agency platform focused on brand growth, SEO, and high-conversion lead generation.", 
       img: "/p6.jpeg", 
-      link: "https://proplumb-coral.vercel.app/" 
+      link: "https://www.bluedovemarketing.com" 
     },
     { id: "3", title: "Obsidian Estates", tag: "Real Estate", desc: "Cinematic luxury property platform featuring real-time filtering.", img: "/p3.jpeg", link: "https://luxury-real-estate-swart.vercel.app/" },
     { id: "5", title: "Sonic Journal", tag: "AI Audio", desc: "AI-powered mood tracker transforms text into curated soundtracks.", img: "/p5.jpeg", link: "https://music-journal-eight.vercel.app/" },
